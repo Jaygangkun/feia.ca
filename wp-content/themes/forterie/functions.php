@@ -572,3 +572,90 @@ add_action( 'vc_before_init', 'vc_before_init_actions' );
 function vc_before_init_actions() {
     require_once( get_template_directory().'/vc-elements/my-first-custom-element.php' ); 
 }
+
+function tech101Signup(){
+
+    $sendgrid_api = "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";
+
+    $echo_result = array();
+
+    if(isset($_POST['email'])){
+        $email = $_POST['email'];
+    }
+    else{
+        $email = '';
+    }
+
+    if(isset($_POST['first_name'])){
+        $first_name = $_POST['first_name'];
+    }
+    else{
+        $first_name = '';
+    }
+
+    if(isset($_POST['last_name'])){
+        $last_name = $_POST['last_name'];
+    }
+    else{
+        $last_name = '';
+    }
+
+    if(isset($_POST['username'])){
+        $username = $_POST['username'];
+    }
+    else{
+        $username = '';
+    }
+
+    if(isset($_POST['post_code'])){
+        $post_code = $_POST['post_code'];
+    }
+    else{
+        $post_code = '';
+    }
+
+    // sendgrid api
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.sendgrid.com/v3/marketing/contacts',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'PUT',
+        CURLOPT_POSTFIELDS =>'{
+        "contacts": [
+            {
+            "email": "'.$email.'",
+            "first_name": "'.$first_name.'",
+            "last_name": "'.$last_name.'",
+            "postal_code": "'.$post_code.'",
+            "custom_fields" : {
+                "w1_T": "'.$username.'"
+            }
+            }
+        ]
+        }',
+        CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json',
+            'Authorization: Bearer '.$sendgrid_api
+        ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+
+
+    $echo_result['send_grid'] = $response;
+
+    echo json_encode($echo_result);
+
+    die();
+}
+
+add_action('wp_ajax_tech101_signup', 'tech101Signup');
+add_action('wp_ajax_nopriv_tech101_signup', 'tech101Signup');

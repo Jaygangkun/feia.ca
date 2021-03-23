@@ -471,3 +471,220 @@ a.btn.btn-view-all:hover{background:#f11900}
 .tribe-events .tribe-events-c-ical__link:active, .tribe-events .tribe-events-c-ical__link:focus, .tribe-events .tribe-events-c-ical__link:hover {color: #fff !important; background-color: #ed1d1e !important;}
 .tribe-events .datepicker .day.active, .tribe-events .datepicker .day.active.focused, .tribe-events .datepicker .day.active:focus, .tribe-events .datepicker .day.active:hover, .tribe-events .datepicker .month.active, .tribe-events .datepicker .month.active.focused, .tribe-events .datepicker .month.active:focus, .tribe-events .datepicker .month.active:hover, .tribe-events .datepicker .year.active, .tribe-events .datepicker .year.active.focused, .tribe-events .datepicker .year.active:focus, .tribe-events .datepicker .year.active:hover {background: #f11900 !important;}
 span.month.focused.active.current {background: #ed1d1e !important; font-weight: bold;}
+
+/* Tech101 Signup Page */
+.tech101signup-page-content{
+	background: #F5F5F5;
+	padding: 100px;
+	padding-bottom: 50px;
+}
+
+.tech101signup-page-content-wrap{
+	display: flex;
+	align-items: stretch;
+	max-width: 1200px;
+	margin: auto;
+	background: white;
+}
+
+.tech101signup-content-left{
+	width: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+
+.tech101signup-content-right{
+	width: 50%;
+	padding: 50px;
+}
+
+.tech101signup-title{
+	margin-bottom: 50px;
+	margin-bottom: 50px;
+    font-size: 50px;
+    color: black;
+    font-weight: bold;
+}
+
+.tech101signup-desc{
+	color: #545B5C;
+	font-size: 18px;
+}
+
+.tech101signup-form-group label{
+	display: block;
+	color: #545B5C;
+	font-size: 18px;
+}
+
+.tech101signup-form-group input{
+	width: 100%;
+	outline: none;
+	color: #545B5C;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.tech101signup-form-group{
+	margin-bottom: 30px;
+}
+
+/* Customize the label (the container) */
+.tech101signup-form-group .container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 30px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+  
+/* Hide the browser's default checkbox */
+.tech101signup-form-group .container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+  
+/* Create a custom checkbox */
+.tech101signup-form-group .checkmark {
+	position: absolute;
+	top: 6px;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	border: 2px solid #818687;
+}
+  
+/* On mouse-over, add a grey background color */
+.tech101signup-form-group .container:hover input ~ .checkmark {
+	background-color: white;
+}
+  
+/* When the checkbox is checked, add a blue background */
+.tech101signup-form-group .container input:checked ~ .checkmark {
+	background-color: #818687;
+}
+  
+/* Create the checkmark/indicator (hidden when not checked) */
+.tech101signup-form-group .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+  
+/* Show the checkmark when checked */
+.tech101signup-form-group .container input:checked ~ .checkmark:after {
+	display: block;
+}
+  
+/* Style the checkmark/indicator */
+.tech101signup-form-group .container .checkmark:after {
+	left: 0px;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border: solid white;
+    background: #545B5C;
+}
+
+.tech101signup-form-btn{
+	cursor: pointer;
+    display: inline-block;
+    padding: 15px 40px;
+    color: white;
+    background: #E38346;
+    margin-bottom: 15px;
+    text-align: center;
+    min-width: 150px;
+}
+
+.tech101signup-form-link{
+	text-decoration: none;
+	color: #E38346;
+	font-size: 20px;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.tech101signup-form-group-submit-btn{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.tech101signup-form-group-submit-btn .tech101signup-desc{
+	margin-right: 5px;
+}
+
+.tech101signup-step{
+	max-width: 550px;
+	margin: auto;
+}
+
+.tech101signup-page-rip{
+	position: absolute;
+    right: 0px;
+    width: 50px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.tech101signup-footer{
+	background: #F5F5F5;
+}
+
+.tech101signup-footer{
+	padding: 30px;
+}
+
+.tech101signup-header{
+	border-bottom: none;
+    box-shadow: 0 0 6px 0 rgb(0 0 0 / 75%);
+    padding: 30px 0;
+    background: #fff;
+    overflow: visible;
+}
+
+.tech101signup-header-content{
+	max-width: 1300px;
+	margin: auto;
+	padding: 0px 20px;
+}
+
+.tech101signup-header-logo__img{
+	height: 30px;
+}
+
+.tech101signup-footer-wrap{
+	max-width: 1100px;
+	margin: auto;
+}
+
+#tech101signup_footer_desc{
+	font-size: 14px;
+}
+
+.tech101signup-footer-link{
+	color: #E38346;
+	text-decoration: underline;
+}
+
+.flex-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-col-50 {
+	width: calc(50% - 10px);
+}
