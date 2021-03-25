@@ -7,6 +7,9 @@
 get_header();
 ?>
 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 <style type="text/css">
     .vcv-header{
         display: none;
@@ -14,13 +17,13 @@ get_header();
 </style>
 <div class="tech101signup-header">
     <div class="tech101signup-header-content">
-        <a href="https://tech101.feia.ca/"><img class="tech101signup-header-logo__img" src="<?php echo get_template_directory_uri()?>/images/tech101-logo.png"></a>
+        <a href="https://feia.ca/tech101/"><img class="tech101signup-header-logo__img" src="<?php echo get_template_directory_uri()?>/images/tech101-logo.png"></a>
     </div>
 </div>
 <div class="tech101signup-page-content">
     <div class="tech101signup-page-content-wrap">
-        <div class="tech101signup-content-left" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-image.jpg)">
-            <div class="tech101signup-page-rip" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-page-rip.png)"></div>
+        <div class="tech101signup-content-left" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-image.jpg);">
+            <div class="tech101signup-page-rip" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-page-rip-new.png)"></div>
         </div>
         <div class="tech101signup-content-right">
             <div class="tech101signup-step" step="1">
@@ -64,7 +67,7 @@ get_header();
                 </div>
 
                 <div class="tech101signup-form-group">
-                    <label class="container">Yes, I Would like to receive exclusive opportunities, community updates, career advice, and more through the Tech 101 Newsletter!
+                    <label class="container">Yes, I would like to receive exclusive opportunities, community updates, career advice, and more through the Tech 101 Newsletter!
                         <input type="checkbox" checked>
                         <span class="checkmark"></span>
                     </label>
@@ -72,7 +75,7 @@ get_header();
                 <div class="tech101signup-form-group tech101signup-form-group-submit-btn">
                     <span class="tech101signup-form-btn" id="tech101signup_next_btn">Next</span>
                     <div>
-                    <span class="tech101signup-desc">Already have an account?</span><a class="tech101signup-form-link">Login</a>
+                    <span class="tech101signup-desc">Already have an account?</span><a class="tech101signup-form-link" href="https://tech101.feia.ca/login">Login</a>
                     </div>
                 </div>
             </div>
@@ -87,7 +90,7 @@ get_header();
 </div>
 <div class="tech101signup-footer">
     <div class="tech101signup-footer-wrap">
-        <p id="tech101signup_footer_desc">By creating an account, you agree to the <a class="tech101signup-footer-link" href="https://tech101.feia.ca/tos">Terms of Service</a>, and acknowledge that Tech 101 may process your personal data in accordance wiwth the <a class="tech101signup-footer-link" href="https://tech101.feia.ca/privacy">Pricacy Policy.</a></p>
+        <p id="tech101signup_footer_desc">By creating an account, you agree to the <a class="tech101signup-footer-link" href="https://tech101.feia.ca/tos">Terms of Service</a>, and acknowledge that Tech 101 may process your personal data in accordance with the <a class="tech101signup-footer-link" href="https://tech101.feia.ca/privacy">Privacy Policy.</a></p>
     </div>
 </div>
 <script type="text/javascript">
@@ -97,9 +100,12 @@ get_header();
     }
 
     jQuery(document).ready(function(){
-        jQuery('.tech101signup-content-left').height(jQuery('.tech101signup-content-left').height());
+        
         jQuery(document).on('click', '#tech101signup_next_btn', function(){
 
+            jQuery('.tech101signup-step[step="1"]').hide();
+                    jQuery('.tech101signup-step[step="2"]').show();
+                    return;
             if(jQuery('#first_name').val() == ''){
                 alert('Please Input First Name');
                 jQuery('#first_name').focus();

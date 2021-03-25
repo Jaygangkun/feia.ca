@@ -575,7 +575,8 @@ function vc_before_init_actions() {
 
 function tech101Signup(){
 
-    $sendgrid_api = "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";
+    $sendgrid_api_key = "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";
+    $edx_api_key = 'HIGuye56PLMHQI7kLgld8r';
 
     $echo_result = array();
 
@@ -641,7 +642,7 @@ function tech101Signup(){
         }',
         CURLOPT_HTTPHEADER => array(
             'Content-Type: application/json',
-            'Authorization: Bearer '.$sendgrid_api
+            'Authorization: Bearer '.$sendgrid_api_key
         ),
     ));
 
@@ -650,7 +651,38 @@ function tech101Signup(){
     curl_close($curl);
 
 
-    $echo_result['send_grid'] = $response;
+    $echo_result['send_grid_resp'] = $response;
+
+    // edx api
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://lms-stage-feia.raccoongang.com/extended_api/user/create',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS =>'{
+                "email": "'.$email.'",
+                "username": "'.$username.'",
+                "first_name": "'.$first_name.'", 
+                "last_name" : "'.$last_name.'"
+            }
+        ',
+        CURLOPT_HTTPHEADER => array(
+            'X-Edx-Api-Key: '.$edx_api_key,
+            'Content-Type: application/json',
+            'Cookie: lms-stage-feia.raccoongang.com_edxapp=1|vhvuu2sgo8dpa81kqlzslb4prrndqczd|kPkfo9USGjCj|IjcwMjUzM2Y1NDIxNTUwOTAyZDNkYjNkMGE3OWE5OTRjNTQ0Mzg1YTY2MjhkYjUxOWU3NDFhOTM1YjUxZjUzZmYi:1lOpu0:PSqG6GPHs8yX8h9o_-btx7UUjFw; openedx-language-preference=en; csrftoken=RZkpsx0oh0dvCvfwQBYGqn7FcigX3YGJOaZYrq3yrUn4F4LMyID65zWqOOR1VP6T'
+        ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+    $echo_result['edx_resp'] = $response;
 
     echo json_encode($echo_result);
 
