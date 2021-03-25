@@ -103,9 +103,6 @@ get_header();
         
         jQuery(document).on('click', '#tech101signup_next_btn', function(){
 
-            jQuery('.tech101signup-step[step="1"]').hide();
-                    jQuery('.tech101signup-step[step="2"]').show();
-                    return;
             if(jQuery('#first_name').val() == ''){
                 alert('Please Input First Name');
                 jQuery('#first_name').focus();
