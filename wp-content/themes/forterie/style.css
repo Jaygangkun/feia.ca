@@ -661,13 +661,13 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 }
 
 .tech101signup-header-content{
-	max-width: 1300px;
+	max-width: 1400px;
 	margin: auto;
-	padding: 0px 20px;
+	padding: 0px 100px;
 }
 
 .tech101signup-header-logo__img{
-	height: 30px;
+	height: 45px;
 }
 
 .tech101signup-footer-wrap{
@@ -699,6 +699,10 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	.tech101signup-page-content{
 		padding: 60px;
 		padding-bottom: 10px;
+	}
+
+	.tech101signup-header-content{
+		padding: 0px 60px;
 	}
 
 	.tech101signup-content-right{
@@ -763,6 +767,10 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	.tech101signup-page-content{
 		padding: 40px;
 		padding-bottom: 10px;
+	}
+
+	.tech101signup-header-content{
+		padding: 0px 40px;
 	}
 
 	.tech101signup-title{
@@ -832,9 +840,13 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	.tech101signup-page-content{
 		padding: 20px;
 	}
+
+	.tech101signup-header-content{
+		padding: 0px 20px;
+	}
 	
 	.tech101signup-header-logo__img{
-		height: 20px;
+		height: 35px;
 	}
 	
 	.tech101signup-header{

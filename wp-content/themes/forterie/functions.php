@@ -655,9 +655,10 @@ function tech101Signup(){
 
     // edx api
     $curl = curl_init();
-
+    
     curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://lms-stage-feia.raccoongang.com/extended_api/user/create',
+        // CURLOPT_URL => 'https://lms-stage-feia.raccoongang.com/extended_api/user/create',
+        CURLOPT_URL => 'https://tech101.feia.ca/extended_api/user/create',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,

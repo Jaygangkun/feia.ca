@@ -17,7 +17,7 @@ get_header();
 </style>
 <div class="tech101signup-header">
     <div class="tech101signup-header-content">
-        <a href="https://feia.ca/tech101/"><img class="tech101signup-header-logo__img" src="<?php echo get_template_directory_uri()?>/images/tech101-logo.png"></a>
+        <a href="https://feia.ca/tech101/"><img class="tech101signup-header-logo__img" src="<?php echo get_template_directory_uri()?>/images/tech101-logo-new.png"></a>
     </div>
 </div>
 <div class="tech101signup-page-content">
@@ -82,7 +82,7 @@ get_header();
             <div class="tech101signup-step" step="2" style="display: none">
                 <h2 class="tech101signup-title">You're ready to begin!</h2>
                 <p class="tech101signup-desc">Check your inbox for an "activate your account email" and set up your password.</p>
-                <p class="tech101signup-desc">You should also receivea welcome email that will help you get started with everything Tech 101 has to offer.</p>
+                <p class="tech101signup-desc">You should also receive a welcome email that will help you get started with everything Tech 101 has to offer.</p>
                 <p class="tech101signup-desc">See you on the other side!</p>
             </div>
         </div>
