@@ -18,7 +18,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,700&display=swap" rel="stylesheet">
-    <?php wp_head(); ?>
+    <?php wp_head(); ?>		
 </head>
 <body <?php body_class(); ?>>
 <div id="main" class="site">

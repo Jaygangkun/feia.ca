@@ -576,7 +576,7 @@ function vc_before_init_actions() {
 function tech101Signup(){
 
     $sendgrid_api_key = "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";
-    $edx_api_key = 'HIGuye56PLMHQI7kLgld8r';
+    $edx_api_key = 'O05CExpyHF19wYw1AIRc3s';
 
     $echo_result = array();
 
