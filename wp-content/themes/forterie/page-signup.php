@@ -15,20 +15,57 @@ get_header();
         display: none;
     }
 </style>
-<div class="tech101signup-header">
-    <div class="tech101signup-header-content">
-        <a href="https://feia.ca/tech101/"><img class="tech101signup-header-logo__img" src="<?php echo get_template_directory_uri()?>/images/tech101-logo-new.png"></a>
-    </div>
-</div>
 <div class="tech101signup-page-content">
     <div class="tech101signup-page-content-wrap">
-        <div class="tech101signup-content-left" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-image.jpg);">
+        <div class="tech101signup-content-left" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-image-new.png);">
             <div class="tech101signup-page-rip" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-page-rip-new.png)"></div>
+            <a class="tech101signup-logo-wrap" href="https://feia.ca/tech101/">
+                <img class="tech101signup-logo__img-new" src="<?php echo get_template_directory_uri()?>/images/tech101-logo-dark .png">
+            </a>
+            <div class="tech101signup-learn-wrap">
+                <div class="tech101signup-learn-wrap__wave--top" style="background-image:url(<?php echo get_template_directory_uri()?>/images/signup-wave-top.svg)"></div>
+                <div class="tech101signup-learn-wrap__content">
+                    <p class="tech101signup-learn__desc">Upgrade your digital skills with FREE certificate courses on Excel, Powerpoint, Microsoft Teams, and more!</p>
+                    <div class="tech101signup-socials">
+                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-excel.png">
+                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-word.png">
+                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-powerpoint.png">
+                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-microsoft teams.png">
+                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-google-calendar.png">
+                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-gmail.png">
+                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-zoom.png">
+                    </div>
+                    <p class="tech101signup-learn__desc2">Learn essential skills to help you land your next job.</p>
+                    <ul class="tech101signup-learn-skills">
+                        <li>
+                            <img class="tech101signup-learn-skill__img" src="<?php echo get_template_directory_uri()?>/images/icon-check.svg">
+                            <p>Beginner-friendly, bite-sized courses</p>
+                        </li>
+                        <li>
+                            <img class="tech101signup-learn-skill__img" src="<?php echo get_template_directory_uri()?>/images/icon-check.svg">
+                            <p>Certificate provided for each course</p>
+                        </li>
+                        <li>
+                            <img class="tech101signup-learn-skill__img" src="<?php echo get_template_directory_uri()?>/images/icon-check.svg">
+                            <p>Access to job opportunities and career tips in the Tech 101 Community group and weekly newsletters</p>
+                        </li>
+                        <li>
+                            <img class="tech101signup-learn-skill__img" src="<?php echo get_template_directory_uri()?>/images/icon-check.svg">
+                            <p>100% FREE</p>
+                        </li>
+                    </ul>
+                    <div class="tech101signup-learn-btns">
+                        <span class="tech101signup-learn-btn" id="btn_watch_video">Watch the video</span>
+                        <a class="tech101signup-learn-btn tech101signup-learn-btn--fill" href="https://feia.ca/tech101/">Learn more</a>
+                    </div>
+                </div>
+                <div class="tech101signup-learn-wrap__wave--bottom" style="background-image:url(<?php echo get_template_directory_uri()?>/images/signup-wave-bottom.png)"></div>
+            </div>
         </div>
         <div class="tech101signup-content-right">
             <div class="tech101signup-step" step="1">
                 <h2 class="tech101signup-title">Join Tech 101 today, <br>100% free.</h2>
-                <p class="tech101signup-desc">Sign up now and gain full access to Tech 101's courses and community features! Simple enter your details below and we will send you a link to your account through your email.</p>
+                <p class="tech101signup-desc">Created by Fort Erie International Academy and Huawei Technologies, Tech 101 was designed to make digital literacy accessible to all Canadians.</p>
                 <div class="flex-row">
                     <div class="flex-col-50">
                         <div class="tech101signup-form-group">
@@ -88,9 +125,13 @@ get_header();
         </div>
     </div>
 </div>
-<div class="tech101signup-footer">
-    <div class="tech101signup-footer-wrap">
-        <p id="tech101signup_footer_desc">By creating an account, you agree to the <a class="tech101signup-footer-link" href="https://tech101.feia.ca/tos">Terms of Service</a>, and acknowledge that Tech 101 may process your personal data in accordance with the <a class="tech101signup-footer-link" href="https://tech101.feia.ca/privacy">Privacy Policy.</a></p>
+<div class="modal" id="modal_video">
+    <div class="modal-wrap">
+        <div class="modal-content">
+            <div class="video-wrap">
+                <iframe data-src="https://www.youtube.com/embed/cPr1fZ4CK8I"></iframe>
+            </div>
+        </div>
     </div>
 </div>
 <script type="text/javascript">
@@ -150,5 +191,34 @@ get_header();
                 }
             })
         })
+
+        jQuery(document).on('click', '#btn_watch_video', function(){
+            jQuery('.video-wrap iframe').attr('src', jQuery('.video-wrap iframe').attr('data-src'));
+            jQuery('body').addClass('show-modal');
+        })
+
+        jQuery(document).on('click', '.modal', function(){
+            jQuery('body').removeClass('show-modal');
+            jQuery('.video-wrap iframe').attr('src', '');
+        })
+
+        // document.addEventListener('click', e => {
+        //     let clickedOutside = true;
+
+        //     e.path.forEach(item => {
+        //         if (!clickedOutside)
+        //             return;
+
+        //         if (item.className === 'video-wrap' || item.className === 'tech101signup-learn-btn')
+        //             clickedOutside = false;
+        //     });
+
+        //     if (clickedOutside){
+        //         // Make an action if it's clicked outside..
+        //         jQuery('body').removeClass('show-modal');
+        //         jQuery('.video-wrap iframe').attr('src', '');
+        //     }
+                
+        // });
     })
 </script>

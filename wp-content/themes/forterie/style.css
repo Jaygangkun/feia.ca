@@ -475,14 +475,14 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 /* Tech101 Signup Page */
 .tech101signup-page-content{
 	background: #F5F5F5;
-	padding: 100px;
-	padding-bottom: 50px;
+	/* padding: 100px; */
+	/* padding-bottom: 50px; */
 }
 
 .tech101signup-page-content-wrap{
 	display: flex;
 	align-items: stretch;
-	max-width: 1200px;
+	/* max-width: 1200px; */
 	margin: auto;
 	background: white;
 }
@@ -493,6 +493,9 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .tech101signup-content-right{
@@ -695,10 +698,180 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	width: calc(50% - 10px);
 }
 
+.tech101signup-logo-wrap{
+	position: absolute;
+	left: 30px;
+	top: 30px;
+}
+
+.tech101signup-learn-wrap{
+	width: 80%;
+	max-width: 530px;
+	margin-right: 50px;
+}
+
+.tech101signup-learn-wrap__wave--top{
+	width: 100%;
+    height: 80px;
+    background-size: cover;
+}
+
+.tech101signup-learn-wrap__wave--bottom{
+	width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tech101signup-learn-wrap__content{
+	background: rgba(227, 131, 70, 0.9);
+	padding: 15px 60px;
+}
+
+.tech101signup-learn__desc{
+	font-size: 24px;
+	line-height: 36px;
+	color: white;
+    font-family: 'Poppins', serif;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.tech101signup-socials{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.tech101signup-social__img{
+	margin: 0px 12px;
+}
+
+.tech101signup-learn__desc2{
+	font-size: 20px;
+	line-height: 26px;
+	color: white;
+	text-align: center;
+    font-family: 'Merriweather', serif;
+	margin-bottom: 30px;
+}
+
+.tech101signup-learn-skill__img{
+	margin-right: 15px;
+	position: relative;
+	top: 5px;
+}
+
+.tech101signup-learn-btns{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.tech101signup-learn-btn{
+	font-family: 'Merriweather', serif;
+	font-size: 18px;
+	line-height: 23px;
+	padding: 10px 15px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	border: 3px solid rgba(255, 255, 255, 0.9);
+	color: white;
+	background: transparent;
+	min-width: 175px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.tech101signup-learn-btn:hover{
+	text-decoration: none;
+}
+
+.tech101signup-learn-btn--fill{
+	background: white;
+	color: rgba(227, 131, 70, 0.9);
+}
+
+.tech101signup-learn-skills{
+	padding-left: 0px;
+	list-style: none;
+	margin-left: 0px;
+}
+
+.tech101signup-learn-skills li{
+	display: flex;
+	align-items: flex-start;
+}
+
+.tech101signup-learn-skills li p{
+	margin: 0px;
+	font-size: 18px;
+	line-height: 30px;
+	font-family: 'Merriweather', serif;
+	color: white;
+}
+
+.modal{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: #564c4c8c;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	display: none;
+}
+
+.show-modal .modal{
+	display: flex;
+}
+
+.show-modal {
+	overflow: hidden;
+}
+
+.modal-wrap{
+	width: 50%;
+	max-width: 700px;
+}
+
+.video-wrap{
+	width: 100%;
+	height: 0px;
+	padding-top: 60%;
+	position: relative;
+}
+
+.video-wrap iframe{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	outline: none;
+}
+
+@media screen and (max-width: 1200px){
+	.tech101signup-learn-btns{
+		display: block;
+		text-align: center;
+	}
+
+	.tech101signup-learn-btn{
+		margin: 5px 0px;
+		width: 100%;
+	}
+}
+
 @media screen and (max-width: 1024px){
 	.tech101signup-page-content{
-		padding: 60px;
-		padding-bottom: 10px;
+		/* padding: 60px;
+		padding-bottom: 10px; */
 	}
 
 	.tech101signup-header-content{
@@ -746,11 +919,63 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	.flex-col-50{
 		width: 100%;
 	}
+
+	.tech101signup-learn__desc{
+		font-size: 20px;
+    	line-height: 30px;
+	}
+
+	.tech101signup-socials{
+		flex-wrap: wrap;
+	}
+
+	.tech101signup-social__img{
+		margin-bottom: 15px;
+	}
+
+	.tech101signup-learn__desc2{
+		font-size: 18px;
+    	line-height: 24px;
+	}
+	.tech101signup-learn-skills li p {
+		margin: 0px;
+		font-size: 16px;
+		line-height: 25px;
+	}
+
+	.tech101signup-learn-skills li{
+		margin-bottom: 10px;
+	}
+
+	.tech101signup-learn-wrap__wave--top{
+		height: 20px;
+	}
+
+	.tech101signup-learn-btn{
+		font-size: 16px;
+	}
+
+	.tech101signup-learn-wrap__wave--bottom{
+		height: 60px;
+	}
+
+	.tech101signup-learn-wrap{
+		margin-top: 80px;
+	}
+
+	.tech101signup-learn-wrap__content{
+		padding: 15px 40px;
+	}
+
+	.modal-wrap{
+		width: 80%;
+	}
 }
 
 @media screen and (max-width: 767px){
 	.tech101signup-content-left{
-		display: none;
+		/* display: none; */
+		width: 100%;
 	}
 
 	.tech101signup-content-right{
@@ -761,12 +986,47 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 		font-size: 16px;
 		padding: 10px 30px;
 	}
+
+	.tech101signup-page-content-wrap{
+		display: block;
+	}
+
+	.tech101signup-page-rip{
+		display: none;
+	}
+
+	.tech101signup-learn-wrap{
+		margin-right: 0px;
+	}
+
+	.tech101signup-learn-wrap{
+		margin-top: 120px;
+		margin-bottom: 70px;
+		width: calc(100% - 60px);
+	}
+
+	.tech101signup-learn-wrap__wave--top{
+		height: 80px;
+	}
+
+	.tech101signup-learn-wrap__wave--bottom{
+		height: 80px;
+	}
+
+	.tech101signup-learn-wrap{
+		max-width: 550px;
+	}
+
+	.modal-wrap{
+		width: calc(100% - 30px);
+		max-width: 550px;
+	}
 }
 
 @media screen and (max-width: 480px){
 	.tech101signup-page-content{
-		padding: 40px;
-		padding-bottom: 10px;
+		/* padding: 40px;
+		padding-bottom: 10px; */
 	}
 
 	.tech101signup-header-content{
@@ -834,11 +1094,45 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	.tech101signup-form-group-submit-btn{
 		margin-top: 30px;
 	}
+
+	.tech101signup-learn-wrap__wave--top{
+		height: 20px;
+	}
+
+	.tech101signup-learn-wrap__wave--bottom{
+		height: 60px;
+	}
+
+	.tech101signup-learn__desc{
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	.tech101signup-learn__desc2{
+		font-size: 16px;
+	}
+
+	.tech101signup-socials{
+		margin-bottom: 0px;
+	}
+
+	.tech101signup-learn-btn{
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.tech101signup-logo-wrap{
+		left: 20px;
+	}
+
+	.tech101signup-logo__img-new{
+		width: 180px;
+	}
 }
 
 @media screen and (max-width: 414px){
 	.tech101signup-page-content{
-		padding: 20px;
+		/* padding: 20px; */
 	}
 
 	.tech101signup-header-content{
