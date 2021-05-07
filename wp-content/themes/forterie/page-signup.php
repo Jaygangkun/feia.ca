@@ -89,12 +89,6 @@ get_header();
                         </div>
                     </div>
                     <div class="tech101signup-form-group">
-                        <label>Username</label>
-                        <div class="tech101signup-form-input-wrap">
-                            <input type="text" id="username" name="username">
-                        </div>
-                    </div>
-                    <div class="tech101signup-form-group">
                         <label>Email</label>
                         <div class="tech101signup-form-input-wrap">
                             <input type="text" id="email" name="email">
@@ -161,12 +155,6 @@ get_header();
                 return;
             }
 
-            if(jQuery('#username').val() == ''){
-                alert('Please Input Username');
-                jQuery('#username').focus();
-                return;
-            }
-
             if(jQuery('#email').val() == ''){
                 alert('Please Input Email');
                 jQuery('#email').focus();
@@ -190,7 +178,7 @@ get_header();
                     action: 'tech101_signup',
                     first_name: jQuery('#first_name').val(),
                     last_name: jQuery('#last_name').val(),
-                    username: jQuery('#username').val(),
+                    username: jQuery('#email').val(),
                     email: jQuery('#email').val(),
                     post_code: jQuery('#post_code').val(),
                 },
