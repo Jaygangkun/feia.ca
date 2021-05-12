@@ -139,6 +139,15 @@ get_header();
         return re.test(String(email).toLowerCase());
     }
 
+    function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
     jQuery(document).ready(function(){
         
         jQuery(document).on('click', '#tech101signup_next_btn', function(){
@@ -167,7 +176,7 @@ get_header();
                 return;
             }
 
-            if (window.growsurf) {
+            if (window.growsurf && getParameterByName('grsf') != null && getParameterByName('grsf') != '') {
                 growsurf.triggerReferral(jQuery('#email').val());
             }
             
