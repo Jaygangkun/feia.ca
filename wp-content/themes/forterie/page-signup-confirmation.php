@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Tech101 Signup Page
+* Template Name: Tech101 Signup Confirmation Page
 *
 */
 
@@ -66,56 +66,7 @@ get_header();
             </div>
         </div>
         <div class="tech101signup-content-right">
-            <div class="tech101signup-step" step="1">
-                <h2 class="tech101signup-title">Join Tech 101 today, <br>100% free.</h2>
-                <p class="tech101signup-desc">Created by Fort Erie International Academy and Huawei Technologies, Tech 101 was designed to make digital literacy accessible to all Canadians.</p>
-                <form name="tech101signup_form">
-                    <div class="flex-row">
-                        <div class="flex-col-50">
-                            <div class="tech101signup-form-group">
-                                <label>First Name</label>
-                                <div class="tech101signup-form-input-wrap">
-                                    <input type="text" id="first_name" name="first_name">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-col-50">
-                            <div class="tech101signup-form-group">
-                                <label>Last Name</label>
-                                <div class="tech101signup-form-input-wrap">
-                                    <input type="text" id="last_name" name="last_name">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tech101signup-form-group">
-                        <label>Email</label>
-                        <div class="tech101signup-form-input-wrap">
-                            <input type="text" id="email" name="email">
-                        </div>
-                    </div>
-                    <div class="tech101signup-form-group">
-                        <label>Postal Code (Optional)</label>
-                        <div class="tech101signup-form-input-wrap">
-                            <input type="text" id="post_code" name="post_code">
-                        </div>
-                    </div>
-
-                    <div class="tech101signup-form-group">
-                        <label class="container">Yes, I would like to receive exclusive opportunities, community updates, career advice, and more through the Tech 101 Newsletter!
-                            <input type="checkbox" checked name="receive_update">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-                    <div class="tech101signup-form-group tech101signup-form-group-submit-btn">
-                        <span class="tech101signup-form-btn" id="tech101signup_next_btn">Submit</span>
-                        <div>
-                        <span class="tech101signup-desc">Already have an account?</span><a class="tech101signup-form-link" href="https://tech101.feia.ca/login">Login</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="tech101signup-step" step="2" style="display: none">
+            <div class="tech101signup-step" step="2">
                 <h2 class="tech101signup-title">You're ready to begin!</h2>
                 <p class="tech101signup-desc">Check your inbox for an "activate your account email" and set up your password.</p>
                 <p class="tech101signup-desc">You should also receive a welcome email that will help you get started with everything Tech 101 has to offer.</p>
@@ -192,9 +143,8 @@ get_header();
                     post_code: jQuery('#post_code').val(),
                 },
                 success: function(){
-                    // jQuery('.tech101signup-step[step="1"]').hide();
-                    // jQuery('.tech101signup-step[step="2"]').show();
-                    location.href= "<?php echo get_site_url()?>/tech101signupconfirmation";
+                    jQuery('.tech101signup-step[step="1"]').hide();
+                    jQuery('.tech101signup-step[step="2"]').show();
                 }
             })
         })

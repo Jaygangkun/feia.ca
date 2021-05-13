@@ -485,6 +485,7 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	/* max-width: 1200px; */
 	margin: auto;
 	background: white;
+	min-height: 100vh;
 }
 
 .tech101signup-content-left{
@@ -856,6 +857,52 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 	outline: none;
 }
 
+.tech101contest__desc1{
+	font-size: 20px;
+	line-height: 30px;
+    font-family: 'Poppins', serif;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.tech101contest__desc2{
+	font-size: 24px;
+	line-height: 36px;
+    font-family: 'Poppins', serif;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.tech101contest__desc2{
+	font-size: 14px;
+	line-height: 20px;
+	color: #C1C1C1;
+}
+
+.tech101contest-logo__img-new{
+	width: 215px;
+}
+
+.tech101contest-learn-btns{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech101contest-learn-btns .tech101signup-learn-btn--fill{
+	background: white;
+    color: rgba(227, 131, 70, 0.9);
+    border: 3px solid rgba(227, 131, 70, 0.9);
+}
+
+.tech101contest-page-content .tech101signup-learn-wrap{
+	text-align: center;
+}
+
+.tech101contest-img{
+	max-width: 400px;
+}
+
 @media screen and (max-width: 1200px){
 	.tech101signup-learn-btns{
 		display: block;
@@ -925,6 +972,11 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
     	line-height: 30px;
 	}
 
+	.tech101contest__desc1{
+		font-size: 16px;
+		line-height: 25px;
+	}
+
 	.tech101signup-socials{
 		flex-wrap: wrap;
 	}
@@ -989,6 +1041,7 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 
 	.tech101signup-page-content-wrap{
 		display: block;
+		min-height: initial;
 	}
 
 	.tech101signup-page-rip{
@@ -1127,6 +1180,25 @@ span.month.focused.active.current {background: #ed1d1e !important; font-weight: 
 
 	.tech101signup-logo__img-new{
 		width: 180px;
+	}
+
+	.tech101contest__desc1 {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.tech101contest__desc2 {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.tech101contest-page-content .tech101signup-learn-wrap{
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.tech101contest-img{
+		max-width: 300px;
 	}
 }
 

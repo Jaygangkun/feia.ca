@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Tech101 Signup Page
+* Template Name: Tech101 Contest Page
 *
 */
 
@@ -18,51 +18,21 @@ get_header();
 <script type="text/javascript">
   (function(g,r,s,f){g.grsfSettings={campaignId:"dq98lx",version:"2.0.0"};s=r.getElementsByTagName("head")[0];f=r.createElement("script");f.async=1;f.src="https://app.growsurf.com/growsurf.js"+"?v="+g.grsfSettings.version;f.setAttribute("grsf-campaign", g.grsfSettings.campaignId);!g.grsfInit?s.appendChild(f):"";})(window,document);
 </script>
-<div class="tech101signup-page-content">
+<div class="tech101signup-page-content tech101contest-page-content">
     <div class="tech101signup-page-content-wrap">
-        <div class="tech101signup-content-left" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-image-new.png);">
-            <div class="tech101signup-page-rip" style="background-image:url(<?php echo get_template_directory_uri()?>/images/tech101signup-page-rip-new.png)"></div>
+        <div class="tech101signup-content-left">
             <a class="tech101signup-logo-wrap" href="https://feia.ca/tech101/">
-                <img class="tech101signup-logo__img-new" src="<?php echo get_template_directory_uri()?>/images/tech101-logo-dark.png">
+                <img class="tech101contest-logo__img-new" src="<?php echo get_template_directory_uri()?>/images/tech101-logo-new.png">
             </a>
             <div class="tech101signup-learn-wrap">
-                <div class="tech101signup-learn-wrap__wave--top" style="background-image:url(<?php echo get_template_directory_uri()?>/images/signup-wave-top.svg)"></div>
-                <div class="tech101signup-learn-wrap__content">
-                    <p class="tech101signup-learn__desc">Upgrade your digital skills with FREE certificate courses on Excel, Powerpoint, Microsoft Teams, and more!</p>
-                    <div class="tech101signup-socials">
-                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-excel.png">
-                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-word.png">
-                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-powerpoint.png">
-                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-microsoft teams.png">
-                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-google-calendar.png">
-                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-gmail.png">
-                        <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-zoom.png">
-                    </div>
-                    <p class="tech101signup-learn__desc2">Learn essential skills to help you land your next job.</p>
-                    <ul class="tech101signup-learn-skills">
-                        <li>
-                            <img class="tech101signup-learn-skill__img" src="<?php echo get_template_directory_uri()?>/images/icon-check.svg">
-                            <p>Beginner-friendly, bite-sized courses</p>
-                        </li>
-                        <li>
-                            <img class="tech101signup-learn-skill__img" src="<?php echo get_template_directory_uri()?>/images/icon-check.svg">
-                            <p>Certificate provided for each course</p>
-                        </li>
-                        <li>
-                            <img class="tech101signup-learn-skill__img" src="<?php echo get_template_directory_uri()?>/images/icon-check.svg">
-                            <p>Access to job opportunities and career tips in the Tech 101 Community group and weekly newsletters</p>
-                        </li>
-                        <li>
-                            <img class="tech101signup-learn-skill__img" src="<?php echo get_template_directory_uri()?>/images/icon-check.svg">
-                            <p>100% FREE</p>
-                        </li>
-                    </ul>
-                    <div class="tech101signup-learn-btns">
-                        <span class="tech101signup-learn-btn" id="btn_watch_video">Watch the video</span>
-                        <a class="tech101signup-learn-btn tech101signup-learn-btn--fill" href="https://feia.ca/tech101/">Learn more</a>
-                    </div>
+                <img class="tech101contest-img" src="<?php echo get_template_directory_uri()?>/images/tech101-content-img.jpg">
+                <p class="tech101contest__desc1"><b>Register for Tech 101 and you'll automatically be entered to win a $200 Amazon gift card.</b> We draw a new winner every month</p>
+                <p class="tech101contest__desc1">Tech 101 is free platform offering <b>1-hour courses</b> on essential digital skills such as Microsoft Excel, Zoom, and cybersecurity.</p>
+                <p class="tech101contest__desc2">Contest open to residents of Canada, excluding Quebec, aged 18 or older. No purchase necessary.</p>
+                
+                <div class="tech101contest-learn-btns">
+                    <a class="tech101signup-learn-btn tech101signup-learn-btn--fill" href="https://feia.ca/tech101/">Learn more about Tech 101</a>
                 </div>
-                <div class="tech101signup-learn-wrap__wave--bottom" style="background-image:url(<?php echo get_template_directory_uri()?>/images/signup-wave-bottom.png)"></div>
             </div>
         </div>
         <div class="tech101signup-content-right">
