@@ -603,6 +603,14 @@ function tech101Signup(){
 
     if(isset($_POST['username'])){
         $username = $_POST['username'];
+        $usernames = explode("@", $username);
+        if(count($usernames) == 2){
+            $username = $usernames[0];
+            $username = preg_replace('/[^A-Za-z0-9\-\_]/', '', $username);
+        }
+        else{
+            $username = preg_replace('/[^A-Za-z0-9\-\_]/', '', $username);
+        }
     }
     else{
         $username = '';
