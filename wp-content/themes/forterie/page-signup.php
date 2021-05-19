@@ -28,7 +28,6 @@ get_header();
             <div class="tech101signup-learn-wrap">
                 <div class="tech101signup-learn-wrap__wave--top" style="background-image:url(<?php echo get_template_directory_uri()?>/images/signup-wave-top.svg)"></div>
                 <div class="tech101signup-learn-wrap__content">
-                    <p class="tech101signup-learn__desc">Upgrade your digital skills with FREE certificate courses on Excel, Powerpoint, Microsoft Teams, and more!</p>
                     <div class="tech101signup-socials">
                         <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-excel.png">
                         <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-word.png">
@@ -68,14 +67,14 @@ get_header();
         <div class="tech101signup-content-right">
             <div class="tech101signup-step" step="1">
                 <h2 class="tech101signup-title">Join Tech 101 today, <br>100% free.</h2>
-                <p class="tech101signup-desc">Created by Fort Erie International Academy and Huawei Technologies, Tech 101 was designed to make digital literacy accessible to all Canadians.</p>
+                <p class="tech101signup-desc">Upgrade your digital skills with FREE certificate courses on Excel, PowerPoint, Microsoft Teams, and more!</p>
                 <form name="tech101signup_form">
-                    <div class="flex-row">
+                    <div class="flex-row" style="display: none">
                         <div class="flex-col-50">
                             <div class="tech101signup-form-group">
                                 <label>First Name</label>
                                 <div class="tech101signup-form-input-wrap">
-                                    <input type="text" id="first_name" name="first_name">
+                                    <input type="text" id="first_name" name="first_name" value="first">
                                 </div>
                             </div>
                         </div>
@@ -83,7 +82,7 @@ get_header();
                             <div class="tech101signup-form-group">
                                 <label>Last Name</label>
                                 <div class="tech101signup-form-input-wrap">
-                                    <input type="text" id="last_name" name="last_name">
+                                    <input type="text" id="last_name" name="last_name" value="last">
                                 </div>
                             </div>
                         </div>
@@ -94,7 +93,7 @@ get_header();
                             <input type="text" id="email" name="email">
                         </div>
                     </div>
-                    <div class="tech101signup-form-group">
+                    <div class="tech101signup-form-group" style="display: none">
                         <label>Postal Code (Optional)</label>
                         <div class="tech101signup-form-input-wrap">
                             <input type="text" id="post_code" name="post_code">
@@ -152,17 +151,17 @@ get_header();
         
         jQuery(document).on('click', '#tech101signup_next_btn', function(){
             
-            if(jQuery('#first_name').val() == ''){
-                alert('Please Input First Name');
-                jQuery('#first_name').focus();
-                return;
-            }
+            // if(jQuery('#first_name').val() == ''){
+            //     alert('Please Input First Name');
+            //     jQuery('#first_name').focus();
+            //     return;
+            // }
 
-            if(jQuery('#last_name').val() == ''){
-                alert('Please Input Last Name');
-                jQuery('#last_name').focus();
-                return;
-            }
+            // if(jQuery('#last_name').val() == ''){
+            //     alert('Please Input Last Name');
+            //     jQuery('#last_name').focus();
+            //     return;
+            // }
 
             if(jQuery('#email').val() == ''){
                 alert('Please Input Email');

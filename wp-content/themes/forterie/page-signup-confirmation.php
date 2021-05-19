@@ -28,7 +28,6 @@ get_header();
             <div class="tech101signup-learn-wrap">
                 <div class="tech101signup-learn-wrap__wave--top" style="background-image:url(<?php echo get_template_directory_uri()?>/images/signup-wave-top.svg)"></div>
                 <div class="tech101signup-learn-wrap__content">
-                    <p class="tech101signup-learn__desc">Upgrade your digital skills with FREE certificate courses on Excel, Powerpoint, Microsoft Teams, and more!</p>
                     <div class="tech101signup-socials">
                         <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-excel.png">
                         <img class="tech101signup-social__img" src="<?php echo get_template_directory_uri()?>/images/icon-word.png">
